@@ -1,16 +1,5 @@
 function mergeArrays(arr1, arr2) {
-    let array = [];
-    arr1.filter(item => {
-        if(!array.includes(item)) {
-            array.push(item);
-        }
-    });
-    arr2.filter(item => {
-        if(!array.includes(item)) {
-            array.push(item);
-        }
-    });
-    return array;
+    return Array.from(new Set(arr1.concat(arr2)));
 }
 
 let l1 = [1, 2, 3, 4, 2, 4];

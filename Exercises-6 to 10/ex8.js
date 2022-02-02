@@ -1,14 +1,5 @@
 function largestElement(list) {
-    if(list.length == 0) {
-        return;
-    }
-    let largestElement = list[0];
-    for(let i = 0; i < list.length; i++) {
-        if(largestElement < list[i]) {
-            largestElement = list[i];
-        }
-    }
-    return largestElement;
+    return Math.max.apply(Math, list);
 }
 
 let list = [1,3,2,10];

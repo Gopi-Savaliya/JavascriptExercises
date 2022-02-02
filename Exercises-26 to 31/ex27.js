@@ -1,11 +1,5 @@
 function isHexadecimal(num) {
-    let arr = num.split('');
-    for(let i = 0;i < arr.length; i++) {
-        if((arr[i] < '0' || arr[i] > '9') && (arr[i] < 'A' || arr[i] > 'F')) {
-            return false;
-        }
-        return true;
-    }
+    return (parseInt(num,16).toString(16) === num.toLowerCase());
 }
 
 let num = 'BF57C';
